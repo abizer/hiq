@@ -1,0 +1,7 @@
+[null.null]
+"mem://dev/null" = 0x0
+
+[dev]
+[dev.test]
+"mem://dev/test/1" = 0x1
+"mem://dev/test/2" = 0x2
