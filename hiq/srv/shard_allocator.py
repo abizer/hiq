@@ -8,12 +8,12 @@ from typing import Any, Dict
 
 from fastapi import FastAPI
 
-from hiq.lib.util import read_registration_config
+from hiq.lib.util import read_config, REGISTRATION_CONFIG_NAME, ALLOCATOR_CONFIG_NAME
 
 app = FastAPI()
 
-
-registered_shards = read_registration_config()
+# allocator_config = read_config(ALLOCATOR_CONFIG_NAME)
+registered_shards = read_config(REGISTRATION_CONFIG_NAME)
 
 
 @app.get("/")

@@ -5,7 +5,7 @@ from hiq.lib import util
 
 class Client:
     def __init__(self):
-        self.shards = util.read_registration_config()
+        self.shards = util.read_config(util.REGISTRATION_CONFIG_NAME)
 
     def make_item(
         self,

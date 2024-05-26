@@ -43,12 +43,16 @@ PARTITIONS = {
     # ns, topic, shard
 }
 
+REGISTRATION_CONFIG_NAME: str = "registration.config.toml"
+ALLOCATOR_CONFIG_NAME: str = "allocator.config.toml"
+CLIENT_CONFIG_NAME: str = "client.config.toml"
 
-def read_registration_config(
-    path: str = "registration.toml",
+
+def read_config(
+    path: str = REGISTRATION_CONFIG_NAME,
 ) -> Dict[str, Dict[str, int]]:
-    with open(path, "rb") as registration_file:
-        config = tomllib.load(registration_file)
+    with open(path, "rb") as config_file:
+        config = tomllib.load(config_file)
         return config
 
 
